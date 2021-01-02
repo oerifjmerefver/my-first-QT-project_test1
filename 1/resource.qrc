@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>icon/1.ico</file>
+        <file>icon/2.ico</file>
+        <file>pictrue/base.jpg</file>
+        <file>icon/set.ico</file>
+        <file>pictrue/base_background.jpg</file>
+    </qresource>
+</RCC>

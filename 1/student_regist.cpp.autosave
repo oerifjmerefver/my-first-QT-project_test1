@@ -1,0 +1,50 @@
+#include "test.h"
+#include <QFile>
+#include <QString>
+#include <cstring>
+#include <QMessageBox>
+#include <QDir>
+
+void regist_dialog::ui_login_destroy(){
+    login_sta_id.close();
+    login_sta_password.close();
+    login_edit_id.close();
+    login_edit_password.close();
+    login_but_login.close();
+    login_but_regist.close();
+}
+void regist_dialog::ui_regist(){
+    //ui_login_destroy();
+    regist_sta_name.setParent(this);
+    regist_sta_name.setGeometry(120, 60, 50, 20);
+    regist_sta_name.setText(tr("<font size=4> 昵称: </font>"));
+    regist_sta_id.setParent(this);
+    regist_sta_id.setGeometry(120, 106, 50, 20);
+    regist_sta_id.setText(tr("<font size=4> 账号: </font>"));
+    regist_sta_password.setParent(this);
+    regist_sta_password.setGeometry(120, 152, 50, 20);
+    regist_sta_password.setText(tr("<font size=4> 密码: </font>"));
+    regist_sta_repassword.setParent(this);
+    regist_sta_repassword.setGeometry(80, 198, 90, 20);
+    regist_sta_repassword.setText(tr("<font size=4> 确认密码: </font>"));
+
+    regist_edit_name.setParent(this);
+    regist_edit_name.setGeometry(170, 55, 240, 30);
+    regist_edit_id.setParent(this);
+    regist_edit_id.setGeometry(170, 101, 240, 30);
+    regist_edit_password.setParent(this);
+    regist_edit_password.setGeometry(170, 147, 240, 30);
+    regist_edit_repassword.setParent(this);
+    regist_edit_repassword.setGeometry(170, 193, 240, 30);
+
+    regist_but_quit.setParent(this);
+    regist_but_quit.setGeometry(170, 232, 80, 24);
+    regist_but_quit.setText(tr("取消注册"));
+    regist_but.setParent(this);
+    regist_but.setGeometry(330, 232, 80, 24);
+    regist_but.setText(tr("注册"));
+}
+
+void regist_dialog::regist_id(){
+    ui_regist();
+}
